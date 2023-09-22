@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-	//"net/http"
 )
 
 func printOdds() {
 	// Used for a simple test against Python in terms of iteration speed.
-	const numElements = 100000000
+	const numElements = 1000000
 	odds := make([]int, 0)
 
 	for i := 1; i <= numElements; i++ {
@@ -19,7 +18,7 @@ func printOdds() {
 	fmt.Printf("Length of odd numbers slice: %d\n", len(odds))
 }
 
-func main() {
+func printSomeStuff() {
 	elements := map[int]bool{
 		1: true,
 		2: true,
@@ -41,4 +40,8 @@ func main() {
 
 	// http.ListenAndServe(":3658", nil)
 	printOdds()
+}
+
+func main() {
+	printSomeStuff()
 }
